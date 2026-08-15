@@ -27,7 +27,7 @@
    
     <div class="hero-content">
       <h1>UniResolve</h1>
-      <h2>University Complaint Management &amp; Resolution System</h2>
+      <h2>University Complaint Management Resolution System</h2>
       <p>Report your university-related issues easily and track their resolution through a simple and organized system.</p>
 
       <div class="hero-buttons">
