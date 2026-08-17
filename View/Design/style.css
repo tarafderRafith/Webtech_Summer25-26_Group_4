@@ -14,7 +14,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #22313f;
+  background-color: #03045E;
   padding: 15px 40px;
 }
 
@@ -52,7 +52,7 @@ body {
   width: 100%;
   height: 100vh; 
 
-  background-image: url("../Assets/hero-bg.png");
+  background-image: url("../../Assets/hero-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -70,7 +70,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(34, 49, 63, 0.7); 
+  background: rgba(0, 0, 0, 0.6);
   z-index: 1; 
 }
 
@@ -78,7 +78,7 @@ body {
 .hero-content {
   position: relative;
   z-index: 2; 
-  color: #e4f1fe;
+  color: white;
   max-width: 700px;
   padding: 20px;
 }
@@ -115,27 +115,39 @@ body {
 }
 
 
-.btn-login {
+
+.btn-student {
   background-color: #8dc6ff;
   color: #22313f;
   border-color: #8dc6ff;
 }
 
-.btn-login:hover {
+.btn-student:hover {
   background-color: #e4f1fe;
   border-color: #e4f1fe;
   color: #22313f;
 }
 
-
-.btn-register {
+.btn-staff {
   background-color: transparent;
   color: #e4f1fe;
 }
 
-.btn-register:hover {
+.btn-staff:hover {
   background-color: #34495e;
   border-color: #34495e;
+  color: #e4f1fe;
+}
+
+.btn-admin {
+  background-color: #03045E;
+  color: #e4f1fe;
+  border-color: #03045E;
+}
+
+.btn-admin:hover {
+  background-color: #22313f;
+  border-color: #22313f;
   color: #e4f1fe;
 }
 
@@ -206,24 +218,6 @@ body {
   border-color: #34495e;
   background-color: #ffffff;
 }
-
-
-
-.form-table select {
-  width: 100%;
-  padding: 12px 14px;
-  font-size: 14px;
-  border: 1px solid #8dc6ff;
-  border-radius: 6px;
-  color: #22313f;
-  background-color: #e4f1fe;
-}
-
-.form-table select:focus {
-  outline: none;
-  border-color: #34495e;
-  background-color: #ffffff;
-}
  
 
 input[type="submit"] {
@@ -260,4 +254,3 @@ input[type="submit"]:hover {
 .form-footer-text a:hover {
   color: #8dc6ff;
 }
-

@@ -14,26 +14,25 @@
 
     <ul class="nav-links">
       <li><a href="home.php">Home</a></li>
-      <li><a href="login.php">Login</a></li>
-      <li><a href="register.php">Register</a></li>
     </ul>
   </nav>
 
-  
+
   <section class="hero">
 
-   
+
     <div class="overlay"></div>
 
-   
+
     <div class="hero-content">
       <h1>UniResolve</h1>
-      <h2>University Complaint Management Resolution System</h2>
+      <h2>University Complaint Management & Resolution System</h2>
       <p>Report your university-related issues easily and track their resolution through a simple and organized system.</p>
 
       <div class="hero-buttons">
-        <a href="login.php" class="btn btn-login">Login</a>
-        <a href="register.php" class="btn btn-register">Register</a>
+        <a href="Student/login.php" class="btn btn-student">Student Portal</a>
+        <a href="Staff/login.php" class="btn btn-staff">Staff Portal</a>
+        <a href="Admin/login.php" class="btn btn-admin">Admin Portal</a>
       </div>
     </div>
 
