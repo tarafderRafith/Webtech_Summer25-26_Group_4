@@ -36,6 +36,13 @@
             <td><input type="password" id="password" name="password" placeholder="Enter your password"></td>
           </tr>
 
+          <tr class="remember-row">
+            <td>
+              <input type="checkbox" name="remember" id="remember">
+              <label for="remember">Remember me</label>
+            </td>
+          </tr>
+
           <tr>
             <td><input type="submit" value="Login"></td>
           </tr>
