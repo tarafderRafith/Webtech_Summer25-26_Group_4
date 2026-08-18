@@ -19,7 +19,7 @@
 
       <h2>Student Login</h2>
       <p class="form-subtext">Access your Student account to submit and track complaints.</p>
-      <form>
+      <form action="dashboard.php">
 
         <table class="form-table">
           <tr>

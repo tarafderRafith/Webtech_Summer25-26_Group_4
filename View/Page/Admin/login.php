@@ -19,7 +19,7 @@
 
       <h2>Admin Login</h2>
       <p class="form-subtext">Access your Admin account to submit and track complaints.</p>
-      <form>
+      <form action="dashboard.php">
 
         <table class="form-table">
           <tr>
