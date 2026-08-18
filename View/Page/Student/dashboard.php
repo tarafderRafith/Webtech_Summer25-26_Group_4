@@ -24,7 +24,7 @@
     </div>
 
     <div class="dashboard-cards">
-      <a href="#" class="dashboard-card">
+      <a href="submit-complaint.php" class="dashboard-card">
         <h3>Submit a Complaint</h3>
         <p>Report a new university-related issue.</p>
       </a>
