@@ -21,7 +21,7 @@
       <h2>Create a Admin Account</h2>
       <p class="form-subtext">Register to start reporting and tracking your complaints.</p>
 
-      <form>
+      <form onsubmit="return collect_data()">
 
         <table class="form-table">
           <tr>
