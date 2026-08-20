@@ -23,7 +23,7 @@
       <h2>Submit a New Complaint</h2>
       <p class="form-subtext">Describe your issue below and we will route it to the right department.</p>
 
-      <form>
+      <form onsubmit="return validate_complaint()">
 
         <table class="form-table">
           <tr>

@@ -32,3 +32,34 @@ function collect_data(){
     }
     return valid;
 }
+
+function validate_complaint()
+{
+    let title = document.getElementById("title").value.trim();
+    let category = document.getElementById("category").value.trim();
+    let description = document.getElementById("description").value.trim();
+
+    let valid = true;
+    let message = "";
+
+    if(title.length <5)
+        {
+        message += "Complaint title should be at least 5 characters\n";
+        valid = false;
+        }
+    if(category.length<3)
+        {
+        message += "Category should be at least 3 characters\n";
+        valid = false;
+        }
+    if(description.length <10)
+        {
+        message += "Description should be at least 10 characters\n";
+        valid = false;
+        }
+    if(!valid)
+        {
+        alert(message);
+        }
+    return valid;
+}

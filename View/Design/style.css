@@ -11,11 +11,17 @@ body {
 }
 
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #03045E;
   padding: 15px 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .navbar .logo {
@@ -135,7 +141,6 @@ body {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
 }
 
-/* Medium blue - Staff */
 .btn-staff {
   background-color: #2f6fb0;
   color: #ffffff;
@@ -146,7 +151,7 @@ body {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
 }
 
-/* Deep navy blue - Admin */
+
 .btn-admin {
   background-color: #03045e;
   color: #e4f1fe;
@@ -164,6 +169,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 40px 20px;
+  padding-top: 90px;
   background: linear-gradient(135deg, #e4f1fe, #8dc6ff);
 }
  
@@ -295,12 +301,11 @@ input[type="submit"]:hover {
 }
 
 
-/* =========================================================
-   DASHBOARD PAGES (Student / Staff / Admin)
-   ========================================================= */
+
 .dashboard-section {
   min-height: 100vh;
   padding: 60px 40px;
+  padding-top: 90px;
   background: linear-gradient(135deg, #e4f1fe, #8dc6ff);
 }
 
