@@ -1,4 +1,4 @@
-<?php ?>
+<?php include "../../../Controller/student_registervalidation.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
