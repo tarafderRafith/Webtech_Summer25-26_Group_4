@@ -1,38 +1,54 @@
 <?php
-$email="";
-$password="";
+
+session_start();
+
+$email = "";
+$password = "";
+$message = "";
+$remember = false;
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
-    $email=trim($_POST["email"] ?? "");
-    $password=trim($_POST["password"] ?? "");
+    $email = trim($_POST["email"] ?? "");
+    $password = trim($_POST["password"] ?? "");
 
-    if(!empty($email) && strlen($email)>=5)
+    if(isset($_POST["remember"]))
     {
-        echo "Email: ".$email;
-        echo "<br>";
+        $remember = true;
+    }
+
+    if(empty($email))
+    {
+        $message = "Email is required.";
+    }
+    elseif(empty($password))
+    {
+        $message = "Password is required.";
+    }
+    elseif(!isset($_SESSION["stuff_email"]))
+    {
+        $message = "Please register first.";
+    }
+    elseif($email != $_SESSION["stuff_email"])
+    {
+        $message = "Invalid email or password.";
+    }
+    elseif($password != $_SESSION["stuff_password"])
+    {
+        $message = "Invalid email or password.";
     }
     else
     {
-        echo "Email Must be at least 5 Charectar";
-        echo "<br>";
-    }
+        $_SESSION["stuff_logged_in"] = true;
 
-    if(!empty($password) && strlen($password)>=5)
-    {
-        echo "Password: ".$password;
-        echo "<br>";
-    }
-    else
-    {
-        echo "Password Must be at least 5 Charectar";
-        echo "<br>";
-    }
+        if($remember)
+        {
+            setcookie("stuff_email", $email, time() + 60*60*24*7, "/");
+        }
 
-    if(!empty($email) && strlen($email)>=5 && !empty($password) && strlen($password)>=5)
-    {
         header("Location: dashboard.php");
         exit();
     }
 }
+
 ?>
