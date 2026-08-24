@@ -263,6 +263,12 @@ body {
   border-color: #34495e;
   background-color: #ffffff;
 }
+
+.form-table input:disabled {
+  background-color: #dbe9f5;
+  color: #5a6b7a;
+  cursor: not-allowed;
+}
  
 
 input[type="submit"] {
@@ -358,4 +364,32 @@ input[type="submit"]:hover {
 .dashboard-card:hover {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
   border-color: #03045e;
+}
+
+.profile-info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.profile-info-table td {
+  padding: 12px 0;
+  border-bottom: 1px solid #e4f1fe;
+  font-size: 14px;
+}
+
+.profile-info-table tr:last-child td {
+  border-bottom: none;
+}
+
+.info-label {
+  font-weight: bold;
+  color: #22313f;
+  width: 40%;
+}
+
+.info-value {
+  color: #34495e;
+}
+.profile-btn{
+  margin-bottom: 20px;
 }

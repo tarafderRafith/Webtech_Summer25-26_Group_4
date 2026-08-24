@@ -34,7 +34,7 @@
         <p>Mark complaints as in-progress or resolved.</p>
       </a>
 
-      <a href="#" class="dashboard-card">
+      <a href="profile.php" class="dashboard-card">
         <h3>My Profile</h3>
         <p>View and update your account information.</p>
       </a>
