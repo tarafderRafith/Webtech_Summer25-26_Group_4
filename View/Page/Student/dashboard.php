@@ -1,16 +1,4 @@
-<?php
-
-session_start();
-
-if(!isset($_SESSION["student_logged_in"]))
-{
-    header("Location: login.php");
-    exit();
-}
-
-$student_name = $_SESSION["student_name"];
-
-?>
+<?php ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +19,7 @@ $student_name = $_SESSION["student_name"];
   <section class="dashboard-section">
 
     <div class="dashboard-welcome">
-      <h1>Welcome, <?php echo $student_name; ?></h1>
+      <h1>Welcome, Student</h1>
       <p>Manage your complaints and track their resolution from here.</p>
     </div>
 

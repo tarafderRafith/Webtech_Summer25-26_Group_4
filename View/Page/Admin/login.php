@@ -1,4 +1,6 @@
-<?php ?>
+<?php
+include "../../../Controller/AdminLoginValidation.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +21,12 @@
 
       <h2>Admin Login</h2>
       <p class="form-subtext">Access your Admin account to submit and track complaints.</p>
-      <form action="dashboard.php">
+
+      <?php if (!empty($php_error)) { ?>
+        <p class="php-error"><?php echo $php_error; ?></p>
+      <?php } ?>
+
+      <form method="post" action="" onsubmit="return validate_login()">
 
         <table class="form-table">
           <tr>
@@ -35,7 +42,7 @@
           <tr>
             <td><input type="password" id="password" name="password" placeholder="Enter your password"></td>
           </tr>
-            <tr class="remember-row">
+          <tr class="remember-row">
             <td>
               <input type="checkbox" name="remember" id="remember">
               <label for="remember">Remember me</label>

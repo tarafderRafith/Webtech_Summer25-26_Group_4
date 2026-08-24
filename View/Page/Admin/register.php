@@ -1,4 +1,6 @@
-<?php ?>
+<?php
+include "../../../Controller/AdminRegisterValidation.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +23,11 @@
       <h2>Create a Admin Account</h2>
       <p class="form-subtext">Register to start reporting and tracking your complaints.</p>
 
-      <form onsubmit="return collect_data()">
+      <?php if (!empty($php_error)) { ?>
+        <p class="php-error"><?php echo $php_error; ?></p>
+      <?php } ?>
+
+      <form method="post" action="" onsubmit="return collect_data()">
 
         <table class="form-table">
           <tr>

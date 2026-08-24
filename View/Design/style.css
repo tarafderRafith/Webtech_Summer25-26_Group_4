@@ -200,6 +200,17 @@ body {
   text-align: center;
   margin-bottom: 25px;
 }
+
+.php-error {
+  background-color: #fdecea;
+  color: #b3261e;
+  border: 1px solid #f5c2c0;
+  border-radius: 6px;
+  padding: 12px 14px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: left;
+}
  
 
 .form-table {
@@ -389,7 +400,4 @@ input[type="submit"]:hover {
 
 .info-value {
   color: #34495e;
-}
-.profile-btn{
-  margin-bottom: 20px;
 }
