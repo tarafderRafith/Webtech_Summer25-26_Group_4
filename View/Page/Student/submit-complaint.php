@@ -23,7 +23,11 @@
       <h2>Submit a New Complaint</h2>
       <p class="form-subtext">Describe your issue below and we will route it to the right department.</p>
 
-      <form onsubmit="return validate_complaint()">
+      <?php if (!empty($complaint_error)) { ?>
+        <p class="php-error"><?php echo $complaint_error; ?></p>
+      <?php } ?>
+
+      <form method="post" action="" onsubmit="return validate_complaint()">
 
         <table class="form-table">
           <tr>
