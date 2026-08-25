@@ -79,3 +79,56 @@ function validate_complaint(){
     }
     return valid;
 }
+
+function validate_profile_update()
+{
+    let fullname = document.getElementById("fullname").value.trim();
+    let email = document.getElementById("email").value.trim();
+ 
+    let valid = true;
+    let message = "";
+ 
+    if(fullname.length < 5){
+        message += "Full name should be at least 5 characters\n";
+        valid = false;
+    }
+    if(email == ""){
+        message += "Email cannot be empty\n";
+        valid = false;
+    }
+    if(!valid){
+        alert(message);
+    }
+    return valid;
+}
+ 
+function validate_password_change()
+{
+    let current_password = document.getElementById("current_password").value.trim();
+    let new_password = document.getElementById("new_password").value.trim();
+    let confirm_new_password = document.getElementById("confirm_new_password").value.trim();
+ 
+    let valid = true;
+    let message = "";
+ 
+    if(current_password == "")
+    {
+        message += "Current password cannot be empty\n";
+        valid = false;
+    }
+    if(new_password.length < 5)
+    {
+        message += "New password should be at least 5 characters\n";
+        valid = false;
+    }
+    if(new_password != confirm_new_password)
+    {
+        message += "New Password and Confirm Password do not match\n";
+        valid = false;
+    }
+    if(!valid)
+    {
+        alert(message);
+    }
+    return valid;
+}
