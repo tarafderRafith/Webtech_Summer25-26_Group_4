@@ -1,4 +1,12 @@
-<?php include "../../../Controller/student_complaintvalidation.php"; ?>
+<?php
+session_start();
+if (!isset($_SESSION["logged_in"]) || $_SESSION["role"] != "Student") 
+  {
+    header("Location: login.php");
+    exit();
+  }
+include "../../../Controller/student_complaintvalidation.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +21,7 @@
     <ul class="nav-links">
       <li><a href="../home.php">Home</a></li>
       <li><a href="dashboard.php">Dashboard</a></li>
-      <li><a href="login.php">Logout</a></li>
+      <li><a href="../logout.php">Logout</a></li>
     </ul>
   </nav>
 

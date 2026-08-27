@@ -1,4 +1,12 @@
-<?php ?>
+<?php
+session_start();
+if (!isset($_SESSION["logged_in"]) || $_SESSION["role"] != "Student") 
+{
+    header("Location: login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +20,7 @@
 
     <ul class="nav-links">
       <li><a href="../home.php">Home</a></li>
-      <li><a href="login.php">Logout</a></li>
+      <li><a href="../logout.php">Logout</a></li>
     </ul>
   </nav>
 
@@ -29,7 +37,7 @@
         <p>Report a new university-related issue.</p>
       </a>
 
-      <a href="#" class="dashboard-card">
+      <a href="my-complaints.php" class="dashboard-card">
         <h3>My Complaints</h3>
         <p>View the status of complaints you have submitted.</p>
       </a>
@@ -44,4 +52,4 @@
 
   <script src="../../JS/script.js"></script>
 </body>
-</html> 
+</html>

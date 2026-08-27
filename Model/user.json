@@ -1,0 +1,54 @@
+[
+    {
+        "email": "shihab@g.com",
+        "role": "Student",
+        "password": "$2y$10$EGAZoZhtBLzVgGCV4d6a4.3y.V0\/iIYLxBQNtS46a6Zd2VDHQc6LK",
+        "timestamp": 1787716986
+    },
+    {
+        "email": "admin@uni.com",
+        "role": "Admin",
+        "timestamp": 1787774646
+    },
+    {
+        "email": "student@gmail.com",
+        "role": "Student",
+        "timestamp": 1787800064
+    },
+    {
+        "email": "shih@hab.com",
+        "password": "$2y$10$gScqkKuY85fs93W3RkOVUOaz3EGMSjCDTFZz1s8RL4yVYcg29KO4e",
+        "role": "Student",
+        "timestamp": 1787805765
+    },
+    {
+        "email": "someone@gmail.com",
+        "password": "$2y$10$yrntQPhb5xr0K3Yf\/GDNbu3uLkj9jmZn2PfEBKp1661vKyhradIai",
+        "role": "Student",
+        "timestamp": 1787805954
+    },
+    {
+        "email": "sone@gmail.com",
+        "password": "$2y$10$EVrXCc7fhi2D8lkgF1mweuMr2sSaHaUvlLr\/Ibn0waIleLqchf2jC",
+        "role": "Student",
+        "timestamp": 1787806335
+    },
+    {
+        "email": "java@khan.com",
+        "password": "$2y$10$XEQhr5CY7kB6LnfvExRZoOXuKoQRpzSS94.rxuGT0UD3.ks6x40X6",
+        "role": "Student",
+        "timestamp": 1787806530
+    },
+    {
+        "email": "staffmail@g.com",
+        "password": "$2y$10$z79bRmYF.y5x5P5sNMC8xeG4J5FPT4VP9uRKd6MpQx6sTPhUQLhri",
+        "role": "Staff",
+        "timestamp": 1787806700
+    },
+    {
+        "email": "a@g.com",
+        "password": "$2y$10$miPo5K5dMNwxP7PiZVJghOjxRciilSwMDzatzxCSamGZiSB\/RwPcm",
+        "role": "Admin",
+        "timestamp": 1787806724
+    }
+]

@@ -9,11 +9,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
         if (empty($fullname) || strlen($fullname) < 5) 
         {
-            $profile_error .= "Full name must be at least 5 characters<br>";
+            $profile_error = "Full name must be at least 5 characters<br>";
         }
         if (empty($email) || !str_contains($email, "@")) 
         {
-            $profile_error .= "Email must be valid and contain '@'<br>";
+            $profile_error = "Email must be valid and contain '@'<br>";
         }
     }
 
@@ -25,15 +25,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
         if (empty($current_password)) 
         {
-            $password_error .= "Current password cannot be empty<br>";
+            $password_error = "Current password cannot be empty<br>";
         }
         if (empty($new_password) || strlen($new_password) < 5) 
         {
-            $password_error .= "New password must be at least 5 characters<br>";
+            $password_error = "New password must be at least 5 characters<br>";
         }
         if (empty($confirm_new_password) || $confirm_new_password != $new_password) 
         {
-            $password_error .= "New Password and Confirm Password do not match<br>";
+            $password_error = "New Password and Confirm Password do not match<br>";
         }
     }
 }

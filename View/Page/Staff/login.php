@@ -45,7 +45,7 @@ include "../../../Controller/StaffLoginValidation.php";
 
           <tr class="remember-row">
             <td>
-              <input type="checkbox" name="remember" id="remember">
+              <input type="checkbox" name="remember" id="remember" value="1" <?php echo $remember ? "checked" : ""; ?>>
               <label for="remember">Remember me</label>
             </td>
           </tr>

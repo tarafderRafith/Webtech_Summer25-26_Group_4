@@ -33,7 +33,7 @@ include "../../../Controller/StudentLoginValidation.php";
             <td><label for="email">Email</label></td>
           </tr>
           <tr>
-            <td><input type="email" id="email" name="email" placeholder="Enter your email"></td>
+            <td><input type="email" id="email" name="email" placeholder="Enter your email" value="<?php echo $email; ?>"></td>
           </tr>
 
           <tr>
@@ -45,7 +45,7 @@ include "../../../Controller/StudentLoginValidation.php";
 
           <tr class="remember-row">
             <td>
-              <input type="checkbox" name="remember" id="remember">
+              <input type="checkbox" name="remember" id="remember" value="1" <?php echo $remember ? "checked" : ""; ?>>
               <label for="remember">Remember me</label>
             </td>
           </tr>

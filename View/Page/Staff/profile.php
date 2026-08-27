@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (!isset($_SESSION["logged_in"]) || $_SESSION["role"] != "Staff") {
+    header("Location: login.php");
+    exit();
+}
 include "../../../Controller/StaffProfileValidation.php";
 ?>
 <!DOCTYPE html>
@@ -15,7 +20,7 @@ include "../../../Controller/StaffProfileValidation.php";
     <ul class="nav-links">
       <li><a href="../home.php">Home</a></li>
       <li><a href="dashboard.php">Dashboard</a></li>
-      <li><a href="login.php">Logout</a></li>
+      <li><a href="../logout.php">Logout</a></li>
     </ul>
   </nav>
 
