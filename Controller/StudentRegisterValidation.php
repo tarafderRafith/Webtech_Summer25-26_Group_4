@@ -1,4 +1,5 @@
 <?php
+include "C:/xampp/htdocs/Web tech Project/Webtech_Project_summer_2026/Model/db.php";
 $fullname = "";
 $email = "";
 $password = "";
@@ -21,6 +22,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     if (empty($confirm_password) || $confirm_password != $password) {
         $php_error = "Passwords do not match<br>";
+    }
+
+    if (empty($php_error)) 
+    {
+
+        $database = new db();
+        $connection = $database->connection();
+        $result = $database->register($connection, $fullname, $email, $password, "Student");
+
+        if ($result) {
+            header("Location: login.php");
+            exit();
+        } else {
+            $php_error = "Please try again";
+        }
     }
 }
 ?>

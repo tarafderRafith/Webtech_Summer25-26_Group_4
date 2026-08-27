@@ -50,5 +50,11 @@
         "password": "$2y$10$miPo5K5dMNwxP7PiZVJghOjxRciilSwMDzatzxCSamGZiSB\/RwPcm",
         "role": "Admin",
         "timestamp": 1787806724
+    },
+    {
+        "email": "shihab@gmail.com",
+        "password": "$2y$10$Yev3aFpUprXDEMrAF9w4XOldc3ybrwx15VtIytu7AT9OqaV8AQhma",
+        "role": "Student",
+        "timestamp": 1787831510
     }
 ]
