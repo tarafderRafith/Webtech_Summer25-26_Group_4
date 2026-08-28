@@ -25,5 +25,17 @@ class db{
         $result=$connection->query($sql);
         return $result;
     }
+    function submit_complaint($connection,$title,$category,$description,$submitted_by)
+    {
+        $sql="INSERT INTO complaints(title, category, description, submitted_by) VALUES ('".$title."', '".$category."', '".$description."', '".$submitted_by."')";
+        $result=$connection->query($sql);
+        return $result;
+    }
+    function CheckUser($connection,$email)
+    {
+        $sql="SELECT * FROM users WHERE email='".$email."'";
+        $result=$connection->query($sql);
+        return $result;
+    }
 }
 ?>

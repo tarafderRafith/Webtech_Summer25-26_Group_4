@@ -41,7 +41,7 @@ include "../../../Controller/StudentRegisterValidation.php";
             <td><label for="email">Email</label></td>
           </tr>
           <tr>
-            <td><input type="email" id="email" name="email" placeholder="Enter your email"></td>
+            <td><input type="email" id="email" name="email" placeholder="Enter your email" onkeyup="CheckEmail()"><span id="emailresponse"></span></td>
           </tr>
 
           <tr>

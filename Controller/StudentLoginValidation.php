@@ -1,5 +1,6 @@
 <?php
 session_start();
+include "C:/xampp/htdocs/Web tech Project/Webtech_Project_summer_2026/Model/db.php";
 $email = "";
 $password = "";
 $remember = false;
@@ -25,32 +26,47 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     }
 
     if (empty($php_error)) {
-        $_SESSION["logged_in"] = true;
-        $_SESSION["email"] = $email;
-        $_SESSION["role"] = "Student";
+        $database = new db();
+        $connection = $database->connection();
+        $result = $database->login($connection, $email);
 
-        if ($remember) {
-            setcookie("remember_student", $email, time() + 86400*30, "/");
+        if ($result && $result->num_rows > 0) {
+            $user = $result->fetch_assoc();
+
+            if ($password == $user["password"] && $user["role"] == "Student") {
+                $_SESSION["logged_in"] = true;
+                $_SESSION["id"] = $user["id"];
+                $_SESSION["email"] = $email;
+                $_SESSION["role"] = "Student";
+
+                if ($remember) {
+                    setcookie("remember_student", $email, time() + 86400*30, "/");
+                } else {
+                    setcookie("remember_student", "", time()-3600, "/");
+                }
+
+                $jsonfile = "../../../Model/user.json";
+                $users = [];
+                if (file_exists($jsonfile)) {
+                    $jsonData = file_get_contents($jsonfile);
+                    $users = json_decode($jsonData, true) ?? [];
+                }
+                $users[] = [
+                    "email" => $email,
+                    'password' => password_hash($password, PASSWORD_DEFAULT),
+                    "role" => "Student",
+                    "timestamp" => time()
+                ];
+                file_put_contents($jsonfile, json_encode($users, JSON_PRETTY_PRINT));
+
+                header("Location: dashboard.php");
+                exit();
+            } else {
+                $php_error = "Invalid email or password<br>";
+            }
         } else {
-            setcookie("remember_student", "", time()-3600, "/");
+            $php_error = "Invalid email or password<br>";
         }
-
-        $jsonfile = "../../../Model/user.json";
-        $users = [];
-        if (file_exists($jsonfile)) {
-            $jsonData = file_get_contents($jsonfile);
-            $users = json_decode($jsonData, true) ?? [];
-        }
-        $users[] = [
-            "email" => $email,
-            'password' => password_hash($password, PASSWORD_DEFAULT),
-            "role" => "Student",
-            "timestamp" => time()
-        ];
-        file_put_contents($jsonfile, json_encode($users, JSON_PRETTY_PRINT));
-
-        header("Location: dashboard.php");
-        exit();
     }
 }
 ?>

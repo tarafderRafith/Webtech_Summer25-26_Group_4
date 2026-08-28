@@ -56,5 +56,35 @@
         "password": "$2y$10$Yev3aFpUprXDEMrAF9w4XOldc3ybrwx15VtIytu7AT9OqaV8AQhma",
         "role": "Student",
         "timestamp": 1787831510
+    },
+    {
+        "email": "shihabbhuiyan500@gmail.com",
+        "password": "$2y$10$zDkDc.5H8kzsRnlgEPDRp.59JIqaowMQ2P603KiRRb9iYSn0RX\/Ii",
+        "role": "Student",
+        "timestamp": 1787854531
+    },
+    {
+        "email": "staff@gmail.com",
+        "password": "$2y$10$60OM4\/nBuT\/zGfVD.jBmVOjQ3c7KPhv1ZuIbHAFMKhwVS7EePYFJ2",
+        "role": "Staff",
+        "timestamp": 1787854610
+    },
+    {
+        "email": "staff2@gmail.com",
+        "password": "$2y$10$NbNCOQwDjww3XZxtL8LvDuVqlgsL7RaPrZx8iZtdI0lqAXvrGRNju",
+        "role": "Staff",
+        "timestamp": 1787855170
+    },
+    {
+        "email": "shihabbhuiyan500@gmail.com",
+        "password": "$2y$10$XS.n2BJ5\/mPybkQOeNB9h.BUfxrg9RX2QyPjqQJ7X1YDTX8x4VBfy",
+        "role": "Student",
+        "timestamp": 1787855445
+    },
+    {
+        "email": "java@khan.com",
+        "password": "$2y$10$K9xUlRSSau2e0CwPHxOc7.vAvBgGHUvuOESWXnjA.N5.YYdtJs95m",
+        "role": "Student",
+        "timestamp": 1787855797
     }
 ]
