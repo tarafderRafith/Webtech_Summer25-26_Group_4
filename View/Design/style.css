@@ -401,3 +401,62 @@ input[type="submit"]:hover {
 .info-value {
   color: #34495e;
 }
+.complaints-list {
+  list-style: none;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.complaint-item {
+  background-color: #ffffff;
+  border: 1px solid #8dc6ff;
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.complaint-title {
+  font-size: 17px;
+  font-weight: bold;
+  color: #22313f;
+  margin-bottom: 8px;
+}
+
+.complaint-description {
+  font-size: 14px;
+  color: #34495e;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.complaint-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 14px;
+  color: #34495e;
+  align-items: center;
+}
+
+.status {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.status-pending {
+  background-color: #fdecea;
+  color: #b3261e;
+}
+
+.status-in-progress {
+  background-color: #fff4d6;
+  color: #8a6d00;
+}
+
+.status-resolved {
+  background-color: #e2f5e9;
+  color: #1b7a3d;
+}

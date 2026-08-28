@@ -37,5 +37,11 @@ class db{
         $result=$connection->query($sql);
         return $result;
     }
+    function get_complaints($connection,$submitted_by)
+    {
+        $sql="SELECT * FROM complaints WHERE submitted_by='".$submitted_by."' ORDER BY id DESC";
+        $result=$connection->query($sql);
+        return $result;
+    }
 }
 ?>
