@@ -278,5 +278,17 @@
         "password": "$2y$10$IOYJvjKWt9eRsPQjhsv48O4mPiqXngbkIvsuzFHTUpWBwye4FCp.m",
         "role": "Admin",
         "timestamp": 1788160674
+    },
+    {
+        "email": "shihabbhuiyan@gmail.com",
+        "password": "$2y$10$w\/UvI2sXrGAZBrp3BuDnzu0W.Lc4xoTMHhybO8yb1o4AqFax.J30u",
+        "role": "Student",
+        "timestamp": 1788178824
+    },
+    {
+        "email": "Staff1@gmail.com",
+        "password": "$2y$10$1Dh\/RuL6BO5eDad\/pvssAOA0EL2BE3NezkUZaRoUA\/pleQngk.pVO",
+        "role": "Staff",
+        "timestamp": 1788179077
     }
 ]

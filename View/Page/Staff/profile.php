@@ -25,7 +25,7 @@ $user = $database->get_user_by_id($connection, $_SESSION["id"]);
     <ul class="nav-links">
       <li><a href="../home.php">Home</a></li>
       <li><a href="dashboard.php">Dashboard</a></li>
-      <li><a href="logout.php">Logout</a></li>
+      <li><a href="../logout.php">Logout</a></li>
     </ul>
   </nav>
 

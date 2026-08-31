@@ -19,7 +19,7 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["role"] != "Staff") {
 
     <ul class="nav-links">
       <li><a href="../home.php">Home</a></li>
-      <li><a href="logout.php">Logout</a></li>
+      <li><a href="../logout.php">Logout</a></li>
     </ul>
   </nav>
 
