@@ -12,7 +12,8 @@ if (isset($_COOKIE["remember_admin"]))
     $remember = true;
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") 
+{
     $email = trim($_POST["email"] ?? "");
     $password = trim($_POST["password"] ?? "");
     $remember = isset($_POST["remember"]) && $_POST["remember"] == "1";
@@ -24,24 +25,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $php_error = "Password must be at least 5 characters<br>";
     }
 
-    if (empty($php_error)) 
-    {
+    if (empty($php_error)) {
         $database = new db();
         $connection = $database->connection();
         $result = $database->login($connection, $email);
 
-        if ($result && $result->num_rows > 0) 
-        {
+        if ($result && $result->num_rows > 0) {
             $user = $result->fetch_assoc();
 
-            if ($password == $user["password"] && $user["role"] == "Admin") 
-            {
+            if ($password == $user["password"] && $user["role"] == "Admin") {
                 $_SESSION["logged_in"] = true;
+                $_SESSION["id"] = $user["id"];
                 $_SESSION["email"] = $email;
                 $_SESSION["role"] = "Admin";
 
-                if ($remember) 
-                {
+                if ($remember) {
                     setcookie("remember_admin", $email, time()+86400*30, "/");
                 } else {
                     setcookie("remember_admin", "", time()-3600, "/");

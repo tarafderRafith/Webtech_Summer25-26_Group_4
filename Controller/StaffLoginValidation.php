@@ -35,19 +35,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
             if ($password == $user["password"] && $user["role"] == "Staff") {
                 $_SESSION["logged_in"] = true;
+                $_SESSION["id"] = $user["id"];
                 $_SESSION["email"] = $email;
                 $_SESSION["role"] = "Staff";
 
                 if ($remember) {
-                    setcookie("remember_staff", $email, time()+86400 * 30, "/");
+                    setcookie("remember_staff", $email, time()+86400*30, "/");
                 } else {
                     setcookie("remember_staff", "", time()-3600, "/");
                 }
 
                 $jsonfile = "../../../Model/user.json";
                 $users = [];
-                if (file_exists($jsonfile)) 
-                {
+                if (file_exists($jsonfile)) {
                     $jsonData = file_get_contents($jsonfile);
                     $users = json_decode($jsonData, true) ?? [];
                 }

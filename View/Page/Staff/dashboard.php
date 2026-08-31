@@ -19,7 +19,7 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["role"] != "Staff") {
 
     <ul class="nav-links">
       <li><a href="../home.php">Home</a></li>
-      <li><a href="../logout.php">Logout</a></li>
+      <li><a href="logout.php">Logout</a></li>
     </ul>
   </nav>
 
@@ -31,12 +31,12 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["role"] != "Staff") {
     </div>
 
     <div class="dashboard-cards">
-      <a href="#" class="dashboard-card">
+      <a href="assigned-complaints.php" class="dashboard-card">
         <h3>Assigned Complaints</h3>
         <p>View complaints assigned to you for review.</p>
       </a>
 
-      <a href="#" class="dashboard-card">
+      <a href="update-status.php" class="dashboard-card">
         <h3>Update Status</h3>
         <p>Mark complaints as in-progress or resolved.</p>
       </a>

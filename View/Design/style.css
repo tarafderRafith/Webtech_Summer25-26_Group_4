@@ -298,6 +298,13 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #34495e;
 }
+input[type="submit"].btn-delete {
+  background-color: #c0392b;
+}
+
+input[type="submit"].btn-delete:hover {
+  background-color: #922b21;
+}
  
 
 .form-footer-text {
@@ -401,6 +408,13 @@ input[type="submit"]:hover {
 .info-value {
   color: #34495e;
 }
+
+.profile-divider {
+  border: none;
+  border-top: 1px solid #8dc6ff;
+  margin: 35px 0;
+}
+
 .complaints-list {
   list-style: none;
   max-width: 700px;
@@ -459,4 +473,45 @@ input[type="submit"]:hover {
 .status-resolved {
   background-color: #e2f5e9;
   color: #1b7a3d;
+}
+
+.assign-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  align-items: center;
+}
+
+.assign-form select {
+  padding: 8px 10px;
+  font-size: 13px;
+  border: 1px solid #8dc6ff;
+  border-radius: 6px;
+  color: #22313f;
+  background-color: #e4f1fe;
+}
+
+.assign-form input[type="submit"] {
+  width: auto;
+  margin-top: 0;
+  padding: 8px 18px;
+  font-size: 13px;
+  border-radius: 15px;
+}
+
+.assigned-note {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #03045e;
+}
+
+.status-student {
+  background-color: #8dc6ff;
+  color: #03045e;
+}
+
+.status-staff {
+  background-color: #03045e;
+  color: #e4f1fe;
 }
