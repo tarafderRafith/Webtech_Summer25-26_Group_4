@@ -242,5 +242,41 @@
         "password": "$2y$10$9kDxppoglz4TJY1DLYMwe.oCFTNR0cqJ6GYF3deik1ql0EDY5oatm",
         "role": "Admin",
         "timestamp": 1788112121
+    },
+    {
+        "email": "Staff1@gmail.com",
+        "password": "$2y$10$r9baEL2miyOcy\/IZtCys0ulSgD8KCmjhYbV6UaP0qWoGtiGckZig2",
+        "role": "Staff",
+        "timestamp": 1788159916
+    },
+    {
+        "email": "shihabbhuiyan500@gmail.com",
+        "password": "$2y$10$LaW14seo\/qnK0uT1ZKJy5.iEFDqZMq.QBP5Q.ktQ3xLHJe62gr.Kq",
+        "role": "Student",
+        "timestamp": 1788159934
+    },
+    {
+        "email": "admin@gmail.com",
+        "password": "$2y$10$O72.k1L6oVigjCiS3GaAmesSe8sf7.YV4X7wYlqhk1k6DwujUTcUC",
+        "role": "Admin",
+        "timestamp": 1788160007
+    },
+    {
+        "email": "shihabbhuiyan500@gmail.com",
+        "password": "$2y$10$2LrRIhHSQAocCrEf6PkUuOv1M7t\/MaCMRhA44TIf.6qwdNXi3Fjiu",
+        "role": "Student",
+        "timestamp": 1788160567
+    },
+    {
+        "email": "admin@gmail.com",
+        "password": "$2y$10$2d6\/8vRgluS\/SMzo9G8SaOj\/irztk8Idq\/vmN3ljicKDk9XJt3viu",
+        "role": "Admin",
+        "timestamp": 1788160625
+    },
+    {
+        "email": "admin@gmail.com",
+        "password": "$2y$10$IOYJvjKWt9eRsPQjhsv48O4mPiqXngbkIvsuzFHTUpWBwye4FCp.m",
+        "role": "Admin",
+        "timestamp": 1788160674
     }
 ]

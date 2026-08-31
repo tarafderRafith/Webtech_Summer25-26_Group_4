@@ -145,3 +145,22 @@ function CheckEmail()
     xhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");
     xhttp.send("email=" + email);
 }
+
+function CheckEmailProfile()
+{
+    let email=document.getElementById("email").value;
+    let response= document.getElementById("emailresponse");
+    let xhttp=new XMLHttpRequest();
+    xhttp.onreadystatechange=function(){
+        if(this.readyState==4 && this.status==200)
+        {
+            response.innerHTML=this.responseText;
+        }
+        else{
+            document.getElementById("emailresponse").innerHTML=this.status;
+        }
+    }
+    xhttp.open("POST", "../../../Controller/CheckEmailProfile.php", true);
+    xhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+    xhttp.send("email=" + email);
+}

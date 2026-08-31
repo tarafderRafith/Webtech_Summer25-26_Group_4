@@ -86,6 +86,30 @@ class db{
         $result=$connection->query($sql);
         return $result;
     }
+    function get_user_by_id($connection,$user_id)
+    {
+        $sql="SELECT * FROM users WHERE id='".$user_id."'";
+        $result=$connection->query($sql);
+        return $result->fetch_assoc();
+    }
+    function update_profile($connection,$user_id,$fullname,$email)
+    {
+        $sql="UPDATE users SET fullname='".$fullname."', email='".$email."' WHERE id='".$user_id."'";
+        $result=$connection->query($sql);
+        return $result;
+    }
+    function update_password($connection,$user_id,$new_password)
+    {
+        $sql="UPDATE users SET password='".$new_password."' WHERE id='".$user_id."'";
+        $result=$connection->query($sql);
+        return $result;
+    }
+    function CheckUserExcludingSelf($connection,$email,$user_id)
+    {
+        $sql="SELECT * FROM users WHERE email='".$email."' AND id != '".$user_id."'";
+        $result=$connection->query($sql);
+        return $result;
+    }
 }
 }
 ?>
